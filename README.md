@@ -12,3 +12,7 @@ copy and .env.example as .env and fill blanks
 grant execute access to files 
 
   - `sudo chmod a+x *.sh`
+
+install dependencies and install prometheus:
+
+  - `source requirement.sh && source install.sh`
