@@ -2,7 +2,7 @@
 
 download installer 
 
-  - `git clone -u dev https://github.com/MoeinTavakoli/prometheus-installer/branches`
+  - `git clone -b dev https://github.com/MoeinTavakoli/prometheus-installer/branches`
 
 copy and .env.example as .env and fill blanks
 
