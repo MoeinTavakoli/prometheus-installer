@@ -1,2 +1,5 @@
-# prometheus-installer
-Easy installer Prometheus 
+# Monitoring
+
+download installer 
+
+  - `git clone -u dev https://github.com/MoeinTavakoli/prometheus-installer/branches`
