@@ -47,4 +47,13 @@ sudo chown -R prometheus:prometheus /etc/prometheus/*
 sudo rm -rf /etc/prometheus-file
 
 echo "install successfully ..."
-echo "run the runCmd"
+
+
+echo "copy unit file"
+cp prometheus.service  /etc/systemd/system/
+
+echo "reload daemon and system"
+sudo systemctl daemon-reload
+sudo systemctl enable prometheus
+sudo systemctl start prometheus
+sudo systemctl status prometheus
