@@ -8,7 +8,7 @@ if [ ! -f .env ];
     cp .env.example .env
 fi
 
-
+export CUR_DIR=$PWD
 source .env
 
 sudo rm -rf /etc/prometheus-file/
@@ -44,13 +44,13 @@ sudo cp /etc/prometheus-file/prometheus.yml /etc/prometheus/
 echo "change ownership /etc/prometheus/"
 sudo chown -R prometheus:prometheus /etc/prometheus/*
 
-sudo rm -rf /etc/prometheus-file
+echo "copy unit file"
+cp $CUR_DIR/prometheus.service  /etc/systemd/system/
 
+sudo rm -rf /etc/prometheus-file
 echo "install successfully ..."
 
 
-echo "copy unit file"
-cp prometheus.service  /etc/systemd/system/
 
 echo "reload daemon and system"
 sudo systemctl daemon-reload
