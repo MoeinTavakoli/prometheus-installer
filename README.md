@@ -1,13 +1,18 @@
-# Monitoring
+# prometheus installer
 
 download installer 
 
-  - `git clone -b dev https://github.com/MoeinTavakoli/prometheus-installer/branches`
+  - `git clone https://github.com/MoeinTavakoli/prometheus-installer.git`
 
 copy and .env.example as .env and fill blanks
 
   - `cp .env.example .env`
   - `nano .env` 
+
+env variables
+  - `PROMETHEUS_VERSION` : version of prometheus that you want to install it 
+
+     you can check out all version from [here](https://github.com/prometheus/prometheus/releases)
 
 grant execute access to files 
 
