@@ -45,7 +45,7 @@ echo "change ownership /etc/prometheus/"
 sudo chown -R prometheus:prometheus /etc/prometheus/*
 
 echo "copy unit file"
-cp $CUR_DIR/prometheus.service  /etc/systemd/system/
+sudo cp $CUR_DIR/prometheus.service  /etc/systemd/system/
 
 sudo rm -rf /etc/prometheus-file
 echo "install successfully ..."
